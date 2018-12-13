@@ -66,12 +66,18 @@ For each method, we seperate the dataset into 70% as training set, and 30% as te
 
 	We take different k values range from 1 to 35, and for each k, we use 3-fold-cross-validation on training set to train KNN model and record the train accuracy, test accuracy and specifility accuracy.
 	The accuracies rates of KNN classifier with different values of K are as follow:
-
+	- **Before PCA**
+		![gitment]({{ '/img/knn_before_pca.png'|prepend:site.baseurl}})
+	- **After PCA**
+		![gitment]({{ '/img/knn_after_pca.png'|prepend:site.baseurl}})
 - **Decision Tree**
 
 	We take different max depth values range from 1 to 30, and for each depth, we use 3-fold-cross-validation on training set to train KNN model and record the train accuracy, test accuracy and specifility accuracy.
 	The accuracies rates of Decision Tree classifier with different values of depth are as follow:
-
+	- **Before PCA**
+		![gitment]({{ '/img/dt_before_pca.png'|prepend:site.baseurl}})
+	- **After PCA**
+		![gitment]({{ '/img/dt_after_pca.png'|prepend:site.baseurl}})
 - **Random Forest**
 
 	We test for different parameter combinations such as 
@@ -124,4 +130,8 @@ For each method, we seperate the dataset into 70% as training set, and 30% as te
 #### Results
 
 #### Conclusion
+In this project, we utilize many statistical methods we learned in class including crossvalidation, decision tree, random forest, adaboost with tree, support vector machine, nueral network.
 
+We also realize the effect of the balance of a dataset. If the training data set with a large amount of good behavior observations, the model we obtained performs well on predicting good behavior. However, we concern more on bad behavior prediction in this experiment so the dataset should contain more bad behavior observations.
+
+We believe by applying our strategies, the loan companies will be able to easier in making decisions to decrease default rate of loan, make business decisions, improve loan issue time cycle, and eventually increase benefit.
