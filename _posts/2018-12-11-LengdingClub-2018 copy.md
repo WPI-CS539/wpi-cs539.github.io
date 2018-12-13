@@ -68,16 +68,20 @@ For each method, we seperate the dataset into 70% as training set, and 30% as te
 	The accuracies rates of KNN classifier with different values of K are as follow:
 	- **Before PCA**
 		![gitment]({{ '/img/knn_before_pca.png'|prepend:site.baseurl}})
+		Hence we decide to use K = 11 for training model to test before pca testing set.
 	- **After PCA**
 		![gitment]({{ '/img/knn_after_pca.png'|prepend:site.baseurl}})
+		Hence we decide to use K = 16 for training model to test after pca testing set.
 - **Decision Tree**
 
-	We take different max depth values range from 1 to 30, and for each depth, we use 3-fold-cross-validation on training set to train KNN model and record the train accuracy, test accuracy and specifility accuracy.
+	We take different depth values range from 1 to 30, and for each depth, we use 3-fold-cross-validation on training set to train KNN model and record the train accuracy, test accuracy and specifility accuracy.
 	The accuracies rates of Decision Tree classifier with different values of depth are as follow:
 	- **Before PCA**
 		![gitment]({{ '/img/dt_before_pca.png'|prepend:site.baseurl}})
+		Hence we decide to train the model with depth = 5 to test before pca testing set.
 	- **After PCA**
 		![gitment]({{ '/img/dt_after_pca.png'|prepend:site.baseurl}})
+		Hence we decide to train the model with depth = 5 to test after pca testing set.
 - **Random Forest**
 
 	We test for different parameter combinations such as 
@@ -88,9 +92,16 @@ For each method, we seperate the dataset into 70% as training set, and 30% as te
 	- **Maximum Number of Levels in Tree**
 	- **Minimum number of samples required to split a node**
     - **Minimum number of samples required at each leaf node**
+	
+	"Best" parameters:
 
-	The best parameter combination is as follow:
-	![gitment]({{ '/img/rf_parameters.png'|prepend:site.baseurl}})
+	- **Before PCA**
+		![gitment]({{ '/img/rf_before_pca_parameters.png'|prepend:site.baseurl}})
+		Hence we decide to train the model with these parameters to test before pca testing set.
+	- **After PCA**
+		![gitment]({{ '/img/rf_after_pca_parameters.png'|prepend:site.baseurl}})
+		Hence we decide to train the model with these parameters to test after pca testing set.
+	
 
 - **Adaboost with Decision Tree**
 
@@ -99,8 +110,14 @@ For each method, we seperate the dataset into 70% as training set, and 30% as te
 	- **Number of Trees**
 	- **Learning Rate**
 
-	The best parameter combination is as follow:
-	![gitment]({{ '/img/rf_parameters.png'|prepend:site.baseurl}})
+	"Best" parameters:
+
+	- **Before PCA**
+		![gitment]({{ '/img/ada_before_pca_parameters.png'|prepend:site.baseurl}})
+		Hence we decide to train the model with these parameters to test before pca testing set.
+	- **After PCA**
+		![gitment]({{ '/img/ada_after_pca_parameters.png'|prepend:site.baseurl}})
+		Hence we decide to train the model with these parameters to test after pca testing set.
 
 - **SVM**
 
@@ -110,9 +127,31 @@ For each method, we seperate the dataset into 70% as training set, and 30% as te
 	- **Penalty Parameters**
 	- **Kernel Coefficients**
 	- **Degrees(Only combined with "Poly" Kernel)**
-
-	The best parameter combination is as follow:
-	![gitment]({{ '/img/rf_parameters.png'|prepend:site.baseurl}})
+	
+	"Best" parameters:
+	
+	- **Before PCA**
+		- **Kernel is rbf**
+			
+			Hence we decide to train the model with these parameters to test before pca testing set.
+		- **Kernel is poly**
+			
+			Hence we decide to train the model with these parameters to test before pca testing set.
+		- **Kernel is sigmoid**
+			
+			Hence we decide to train the model with these parameters to test before pca testing set.
+	- **After PCA**
+		- **Kernel is rbf**
+			
+			Hence we decide to train the model with these parameters to test after pca testing set.
+		- **Kernel is poly**
+			
+			Hence we decide to train the model with these parameters to test after pca testing set.
+		- **Kernel is sigmoid**
+			
+			Hence we decide to train the model with these parameters to test after pca testing set.
+		
+	
 
 - **Neural Network**
 
@@ -124,8 +163,14 @@ For each method, we seperate the dataset into 70% as training set, and 30% as te
 	- **Alphas**
 	- **Learning Rates**
 
-	The best parameter combination is as follow:
-	![gitment]({{ '/img/rf_parameters.png'|prepend:site.baseurl}})
+	"Best" parameters:
+
+	- **Before PCA**
+		![gitment]({{ '/img/nn_before_pca_parameters.png'|prepend:site.baseurl}})
+		Hence we decide to train the model with these parameters to test before pca testing set.
+	- **After PCA**
+		![gitment]({{ '/img/nn_after_pca_parameters.png'|prepend:site.baseurl}})
+		Hence we decide to train the model with these parameters to test after pca testing set.
 
 #### Results
 
